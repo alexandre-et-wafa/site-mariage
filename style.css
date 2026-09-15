@@ -26,6 +26,8 @@ body {
     line-height: 1.7; 
 }
 
+/* HEADER */
+
 .hero { 
     position: relative; 
     width: 100%; 
@@ -67,4 +69,56 @@ body {
     font-weight: 300; 
     text-transform: uppercase; 
     letter-spacing: 0.4em; 
+}
+
+/* SECTIONS */
+
+section { 
+    width: 100%; 
+}
+
+/* INTRO */
+
+.intro { 
+    background: white; 
+    padding: var(--section-padding) 20px; 
+} 
+
+.intro-content { 
+    max-width: 750px; 
+    margin: 0 auto; 
+    text-align: center; 
+} 
+
+.eyebrow { 
+    margin-bottom: 20px; 
+    color: var(--color-accent); 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.3em; 
+} 
+
+h2 { 
+    font-family: var(--font-title); 
+    font-size: clamp(2.8rem, 5vw, 4.5rem); 
+    font-weight: 400; 
+    line-height: 1.1; 
+    margin-bottom: 35px; 
+} 
+
+.intro-content p:not(.eyebrow) { 
+    margin-bottom: 20px; 
+    font-size: 1rem; 
+}
+
+
+
+/* footnote */
+
+footer { 
+    padding: 40px 20px; 
+    text-align: center; 
+    background: white; 
+    font-family: var(--font-title); 
+    font-size: 1.5rem; 
 }
