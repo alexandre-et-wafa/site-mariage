@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wafa & Alexandre - Notre Mariage</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="./navigation.js"></script>
 </head>
+
 <body>
-    
+    <!-- navigation verticale -->
+    <nav class="section-nav" aria-label="Navigation">
+        <a href="#accueil" class="nav-dot active" aria-label="Accueil">
+            <span></span>
+        </a>
+        <a href="#histoire" class="nav-dot" aria-label="Notre histoire">
+            <span></span>
+        </a>
+        <a href="#cadeau" class="nav-dot" aria-label="Nous faire un cadeau">
+            <span></span>
+        </a>
+        <a href="#rsvp" class="nav-dot" aria-label="RSVP">
+            <span></span>
+        </a>
+    </nav>
+
     <!-- header avec l'image de background et le titre -->
-    <header class="hero" style="background-image: url('images/scene.jpg');">
+    <section id="accueil" class="page-section hero" style="background-image: url('images/scene.jpg');">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Wafa & Alexandre</h1>
             <p>se marient !</p>
             <p>15.05.2027</p>
         </div>
-    </header>
-    
-    <!-- contenu du site -->
-    <main>
-        <!-- section d'intro du site -->
-        <section class="intro"> 
-            <div class="intro-content"> 
-                <p class="eyebrow">Notre histoire</p> 
-                <h2>Un jour à partager avec vous</h2> 
-                <p>
-                    Après toutes ces années, nous avons décidé de nous dire oui et nous serions 
-                    très heureux de vous avoir à nos côtés pour célébrer cette journée particulière. 
-                </p> 
-                <p>
-                    Retrouvez ici toutes les informations concernant notre mariage, 
-                    et bien sûr la possibilité de confirmer votre présence. 
-                </p>
-            </div> 
-        </section> 
-    </main>
-   
-    <!-- footnote -->
-    <footer> 
-        <p>Wafa & Alexandre</p> 
-    </footer>
+    </section>
 
+    <!-- section d'intro du site -->
+    <section id="histoire" class="page-section light-section">
+        <div class="section-content">
+            <p class="eyebrow">Notre histoire</p>
+            <h2>Un jour à partager avec vous</h2>
+            <div class="text-content">
+                <p>
+                    Après toutes ces années, nous avons décidé de nous dire oui et nous serions
+                    très heureux de vous avoir à nos côtés pour célébrer cette journée particulière.
+                </p>
+                <p>
+                    Retrouvez ici toutes les informations concernant notre mariage,
+                    et bien sûr la possibilité de confirmer votre présence.
+                </p>
+            </div>
+        </div>
+        <footer>
+            <span>Wafa & Alexandre</span>
+        </footer>
+    </section>
+
+    <!-- section lien cagnotte -->
+    <section id="cadeau" class="page-section gift-section">
+        <div class="section-content">
+            <h2>Nous faire un cadeau</h2>
+            <div class="text-content">
+                <p> Votre présence à nos côtés est déjà le plus beau des cadeaux! </p>
+                <p> Si toutefois vous souhaitez participer à notre voyage de noces et à nos futurs projets, nous avons
+                    créé une cagnotte à cette occasion. </p>
+            </div>
+            <a href=null class="main-button" target="_blank" rel="noopener noreferrer">
+                Accéder à la cagnotte
+            </a>
+        </div>
+        <footer>
+            <span>Wafa & Alexandre</span>
+        </footer>
+    </section>
+
+    <!-- section formulaire  -->
+    <section id="rsvp" class="page-section rsvp-section">
+        <div class="section-content rsvp-content">
+            <p class="eyebrow">RSVP</p>
+            <h2>Votre présence</h2>
+            <p class="rsvp-intro">Merci de nous confirmer votre présence avant le <strong>XX XX 2027</strong>.</p>
+
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-row">
+                    <div class="form-group"> 
+                        <label for="name"> Nom et prénom </label> 
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required> 
+                    </div>
+                    <div class="form-group"> 
+                        <label for="email"> Adresse e-mail </label> 
+                        <input type="email" id="email" name="email" placeholder="vous@example.com" required> 
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <label> Serez-vous présent(e) ? </label>
+                    <div class="radio-group"> 
+                        <label class="radio-option"> 
+                            <input type="radio" name="presence"value="Oui" required> 
+                            <span>Oui, avec plaisir</span> 
+                        </label> 
+                        <label class="radio-option"> 
+                            <input type="radio" name="presence" value="Non"> 
+                            <span>Non, malheureusement</span> 
+                        </label> 
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <label for="message"> Un petit mot pour nous </label> 
+                    <textarea id="message" name="message" rows="3" placeholder="Votre message..."></textarea> 
+                </div> 
+                <button type="submit" class="main-button" id="submit-button"> Confirmer ma réponse </button>
+                <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+
+        </div>
+        <footer> 
+            <span>Wafa & Alexandre</span> 
+        </footer>
+    </section>
 
 </body>
+
 </html>
