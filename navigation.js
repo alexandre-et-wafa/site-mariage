@@ -30,10 +30,10 @@ function updateActiveSection(){
         activeDot.classList.add("active");
     }
     else console.log("false");
+    /** comment to test */
 }
 
 var ticking = false;
-
 window.addEventListener("scroll", 
     function(){
         if (!ticking){
