@@ -3,8 +3,8 @@ const navDots = document.querySelectorAll(".nav-dot");
 
 function updateActiveSection(){
     const screenCenter = window.innerHeight/2;
-    const closestSection = null;
-    const closestDistance = Infinity;
+    var closestSection = null;
+    var closestDistance = Infinity;
 
     sections.forEach(function(section){
         const rect = section.getBoundingClientRect();
@@ -32,7 +32,7 @@ function updateActiveSection(){
     else console.log("false");
 }
 
-const ticking = false;
+var ticking = false;
 
 window.addEventListener("scroll", 
     function(){
