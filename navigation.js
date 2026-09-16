@@ -34,7 +34,7 @@ function updateActiveSection(){
 }
 
 var ticking = false;
-window.addEventListener("scroll", 
+window.addEventListener("scrollend", 
     function(){
         if (!ticking){
             window.requestAnimationFrame(function(){
