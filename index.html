@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- navigation verticale -->
+    <!-- navigation verticale v1 ==> canceled 
     <nav class="section-nav" aria-label="Navigation">
         <a href="#accueil" class="nav-dot active" aria-label="Accueil">
             <span></span>
@@ -32,7 +32,7 @@
         <a href="#rsvp" class="nav-dot" aria-label="RSVP">
             <span></span>
         </a>
-    </nav>
+    </nav>-->
 
     <!-- header avec l'image de background et le titre -->
     <section id="accueil" class="page-section hero" style="background-image: url('images/scene.jpg');">
@@ -42,6 +42,11 @@
             <p>se marient !</p>
             <p>15.05.2027</p>
         </div>
+        <nav class="hero-navigation" aria-label="Navigation principale"> 
+            <a href="#histoire"> Infos </a> 
+            <a href="#rsvp"> RSVP </a> 
+            <a href="#cadeau"> Cadeau </a> 
+        </nav>
     </section>
 
     <!-- section d'intro du site -->
@@ -92,39 +97,39 @@
 
             <form id="rsvp-form" class="rsvp-form">
                 <div class="form-row">
-                    <div class="form-group"> 
-                        <label for="name"> Nom et prénom </label> 
-                        <input type="text" id="name" name="name" placeholder="Votre nom" required> 
+                    <div class="form-group">
+                        <label for="name"> Nom et prénom </label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
                     </div>
-                    <div class="form-group"> 
-                        <label for="email"> Adresse e-mail </label> 
-                        <input type="email" id="email" name="email" placeholder="vous@example.com" required> 
+                    <div class="form-group">
+                        <label for="email"> Adresse e-mail </label>
+                        <input type="email" id="email" name="email" placeholder="vous@example.com" required>
                     </div>
                 </div>
-                <div class="form-group"> 
+                <div class="form-group">
                     <label> Serez-vous présent(e) ? </label>
-                    <div class="radio-group"> 
-                        <label class="radio-option"> 
-                            <input type="radio" name="presence"value="Oui" required> 
-                            <span>Oui, avec plaisir</span> 
-                        </label> 
-                        <label class="radio-option"> 
-                            <input type="radio" name="presence" value="Non"> 
-                            <span>Non, malheureusement</span> 
-                        </label> 
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="presence" value="Oui" required>
+                            <span>Oui, avec plaisir</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="presence" value="Non">
+                            <span>Non, malheureusement</span>
+                        </label>
                     </div>
                 </div>
-                <div class="form-group"> 
-                    <label for="message"> Un petit mot pour nous </label> 
-                    <textarea id="message" name="message" rows="3" placeholder="Votre message..."></textarea> 
-                </div> 
+                <div class="form-group">
+                    <label for="message"> Un petit mot pour nous </label>
+                    <textarea id="message" name="message" rows="3" placeholder="Votre message..."></textarea>
+                </div>
                 <button type="submit" class="main-button" id="submit-button"> Confirmer ma réponse </button>
                 <p id="form-message" class="form-message" aria-live="polite"></p>
             </form>
 
         </div>
-        <footer> 
-            <span>Wafa & Alexandre</span> 
+        <footer>
+            <span>Wafa & Alexandre</span>
         </footer>
     </section>
 
