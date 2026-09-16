@@ -19,6 +19,7 @@ function updateActiveSection(){
     if (!closestSection) {
         return;
     }
+    document.body.classList.toggle("hero-active", closestSection.id === "accueil");
 
     navDots.forEach(function (dot) {
         dot.classList.remove("active");
