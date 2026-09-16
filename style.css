@@ -308,11 +308,11 @@ footer {
 }
 
 .section-navigation-top {
-    top: 30px;
+    top: 25px;
 }
 
 .section-navigation-bottom {
-    bottom: 70px;
+    bottom: 25px;
 }
 
 .navigation-arrow {
@@ -370,7 +370,7 @@ footer {
     }
 
     footer {
-        bottom: 18px;
+        bottom: 25px;
     }
 
     .hero-navigation {
@@ -392,7 +392,7 @@ footer {
     }
 
     .section-navigation-bottom {
-        bottom: 60px;
+        bottom: 25px;
     }
 
     .navigation-arrow {
