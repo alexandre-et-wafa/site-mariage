@@ -1,6 +1,8 @@
 const sections = document.querySelectorAll(".page-section");
 const navDots = document.querySelectorAll(".nav-dot");
 
+console.log(navDots);
+
 function updateActiveSection(){
     const screenCenter = window.innerHeight/2;
     var closestSection = null;
@@ -25,12 +27,11 @@ function updateActiveSection(){
     });
 
     const activeDot = document.querySelector(`.nav-dot[href="#${closestSection.id}"]`);
+    console.log(activeDot);
 
     if (activeDot) {
         activeDot.classList.add("active");
     }
-    else console.log("false");
-    /** comment to test */
 }
 
 var ticking = false;
