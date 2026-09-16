@@ -1,9 +1,7 @@
-const sections = document.querySelectorAll(".page-section");
-const navDots = document.querySelectorAll(".nav-dot");
-
-console.log(navDots);
 
 function updateActiveSection(){
+    const sections = document.querySelectorAll(".page-section");
+    const navDots = document.querySelectorAll(".nav-dot");
     const screenCenter = window.innerHeight/2;
     var closestSection = null;
     var closestDistance = Infinity;
@@ -48,8 +46,6 @@ window.addEventListener("scroll",
     { passive: true}
 );
 
-window.addEventListener("resize",
-    updateActiveSection
-);
+window.addEventListener("resize", updateActiveSection);
 
 updateActiveSection();
