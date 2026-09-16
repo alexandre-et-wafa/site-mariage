@@ -30,5 +30,25 @@ function updateActiveSection(){
         activeDot.classList.add("active");
     }
     else console.log("false");
-
 }
+
+const ticking = false;
+
+window.addEventListener("scroll", 
+    function(){
+        if (!ticking){
+            window.requestAnimationFrame(function(){
+                updateActiveSection();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    },
+    { passive: true}
+);
+
+window.addEventListener("resize",
+    updateActiveSection
+);
+
+updateActiveSection();
