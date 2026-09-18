@@ -68,8 +68,8 @@
                 </p>
             </div>
         </div>
-        <a href="#cadeau" class="section-navigation section-navigation-bottom"> 
-            <span class="navigation-arrow">↓</span> 
+        <a href="#cadeau" class="section-navigation section-navigation-bottom">
+            <span class="navigation-arrow">↓</span>
         </a>
         <footer>
             <span>Wafa & Alexandre</span>
@@ -92,8 +92,8 @@
                 Accéder à la cagnotte
             </a>
         </div>
-        <a href="#rsvp" class="section-navigation section-navigation-bottom"> 
-            <span class="navigation-arrow">↓</span> 
+        <a href="#rsvp" class="section-navigation section-navigation-bottom">
+            <span class="navigation-arrow">↓</span>
         </a>
         <footer>
             <span>Wafa & Alexandre</span>
@@ -111,36 +111,50 @@
             <p class="rsvp-intro">Merci de nous confirmer votre présence avant le <strong>XX XX 2027</strong>.</p>
 
             <form id="rsvp-form" class="rsvp-form">
-                <div class="form-row">
+                <div id="rsvp-step-1" class="rsvp-step active">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"> Nom et prénom </label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"> Adresse e-mail </label>
+                            <input type="email" id="email" name="email" placeholder="vous@example.com" required>
+                        </div>
+                    </div>
+                    <button type="button" id="next-button" class="main-button"> Suivant </button>
+                </div>
+                <div id="rsvp-step-2" class="rsvp-step">
                     <div class="form-group">
-                        <label for="name"> Nom et prénom </label>
-                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        <label> Serez-vous présent(e) ? </label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="presence" value="Oui" required>
+                                <span>Oui</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="presence" value="Non">
+                                <span>Non</span>
+                            </label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email"> Adresse e-mail </label>
-                        <input type="email" id="email" name="email" placeholder="vous@example.com" required>
+                        <label for="message">Une information supplémentaire (régime alimentaire), ou un petit mot?
+                        </label>
+                        <textarea id="message" name="message" rows="3" placeholder="Votre message..."></textarea>
+                    </div>
+                    <div class="rsvp-buttons">
+                        <button type="button" id="previous-button" class="secondary-button"> Précédent </button>
+                        <button type="button" id="confirm-button" class="main-button"> Confirmer </button>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label> Serez-vous présent(e) ? </label>
-                    <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="presence" value="Oui" required>
-                            <span>Oui</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="presence" value="Non">
-                            <span>Non</span>
-                        </label>
-                    </div>
+                <div id="rsvp-success" class="rsvp-success">
+                    <p class="eyebrow">Merci</p>
+                    <h2>Votre réponse est enregistrée</h2>
+                    <p> Nous avons bien reçu votre réponse. </p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Une information supplémentaire (régime alimentaire), ou un petit mot? </label>
-                    <textarea id="message" name="message" rows="3" placeholder="Votre message..."></textarea>
-                </div>
-                <button type="submit" class="main-button" id="submit-button"> Confirmer ma réponse </button>
-                <p id="form-message" class="form-message" aria-live="polite"></p>
-            </form>
+        </div>
+        </form>
 
         </div>
         <footer>
