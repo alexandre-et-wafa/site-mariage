@@ -136,26 +136,74 @@ h2 {
 
 /* FORMULAIRE */
 
+.rsvp-step {
+    display: none;
+}
+
+.rsvp-step.active {
+    display: block;
+}
+
+.rsvp-success {
+    display: none;
+}
+
+.rsvp-success.active {
+    display: block;
+}
+
 .rsvp-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     text-align: left;
+}
+
+.rsvp-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.rsvp-buttons .main-button,
+.rsvp-buttons .secondary-button {
+    flex: 1;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 16px 25px;
+    border: 1px solid var(--color-text);
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: var(--color-text);
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group>label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group>label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
 }
 
 input,
@@ -182,8 +230,9 @@ textarea {
 
 .radio-group {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .radio-option {
