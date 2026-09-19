@@ -7,16 +7,16 @@ const previousButton = document.getElementById("previous-button");
 const confirmButton = document.getElementById("confirm-button");
 
 nextButton.addEventListener("click", function () {
-    const firstname = document.getElementById("firstname");
-    const lastname = document.getElementById("lastname");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
 
-    if (!firstname.value.trim()) {
-        firstname.focus();
+    if (!email.value.trim()) {
+        email.focus();
         return;
     }
 
-    if (!lastname.value.trim()) {
-        lastname.focus();
+    if (!name.value.trim()) {
+        name.focus();
         return;
     }
 
