@@ -8,15 +8,14 @@ const confirmButton = document.getElementById("confirm-button");
 
 nextButton.addEventListener("click", function () {
     const name = document.getElementById("name");
-    const email = document.getElementById("email");
-
-    if (!email.value.trim()) {
-        email.focus();
+    if (!name.value.trim()) {
+        name.focus();
         return;
     }
 
-    if (!name.value.trim()) {
-        name.focus();
+    const presence = document.querySelector('input[name="presence"]:checked');
+    if (!presence) {
+        alert("Merci d'indiquer si vous serez présent(e).");
         return;
     }
 
@@ -30,11 +29,12 @@ previousButton.addEventListener("click", function () {
 });
 
 confirmButton.addEventListener("click", function () {
-    const presence = document.querySelector('input[name="presence"]:checked');
-    if (!presence) {
-        alert("Merci d'indiquer si vous serez présent(e).");
+    const email = document.getElementById("email");
+    if (!email.value.trim()) {
+        email.focus();
         return;
     }
+
     step2.classList.remove("active");
     success.classList.add("active");
 });
