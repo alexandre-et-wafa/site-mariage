@@ -64,6 +64,11 @@ body {
 
 .rsvp-content {
     max-width: 800px;
+    display: none;
+}
+
+.rsvp-content.active{
+    display: block;
 }
 
 .rsvp-intro {

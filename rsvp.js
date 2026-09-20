@@ -1,5 +1,6 @@
 const step1 = document.getElementById("rsvp-step-1");
 const step2 = document.getElementById("rsvp-step-2");
+const base = document.getElementById("rsvp-base");
 const success = document.getElementById("rsvp-success");
 
 const nextButton = document.getElementById("next-button");
@@ -15,7 +16,7 @@ nextButton.addEventListener("click", function () {
 
     const presence = document.querySelector('input[name="presence"]:checked');
     if (!presence) {
-        alert("Merci d'indiquer si vous serez présent(e).");
+        alert("Merci d'indiquer si vous serez présent(e)(s).");
         return;
     }
 
@@ -36,6 +37,7 @@ confirmButton.addEventListener("click", function () {
     }
 
     step2.classList.remove("active");
+    base.classList.remove("active");
     success.classList.add("active");
 });
 
